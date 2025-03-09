@@ -1,64 +1,129 @@
-# 🔑 License Key Generator API
+# 🔏 LICENSE KEY GENERATOR (PKI-Based Signing)
 
-An open-source PKI-based license signing & verification system.
+A lightweight **open-source** JavaScript library for **signing and verifying software license keys** using **RSA 2048-bit encryption**.
 <img width="720" alt="Screenshot 2025-03-09 at 3 48 14 PM" src="https://github.com/user-attachments/assets/d374d3a4-cc4a-4452-a8e1-c8026a86f9be" />
 
-## ✨ Features
-- ✅ **Secure License Signing** - Uses RSA PKI to prevent forgery
-- ✅ **Tamper-Proof Verification** - Ensures license authenticity
-- ✅ **REST API Ready** - Works with any frontend
-- ✅ **Swagger UI Included** - Test API calls in your browser
+
+## 🚀 Features
+- 🔑 **Generate RSA Key Pairs**
+- 🔏 **Sign License Keys**
+- ✅ **Verify Signed Licenses**
+- 🔒 **Uses SHA256 + RSA for Security**
+- 🛠 **Minimal & Easy to Integrate**
+- 🌍 **Open-source with API support (Swagger UI)**
+
+---
 
 ## 📦 Installation
+To install this package, run:
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/your-username/license-key-generator.git
-   cd license-key-generator
-   ```
-2. **Install dependencies**  
-   ```bash
-   npm install
-   ```
-3. **Generate RSA key pair**  
-   ```bash
-   node generateKeys.js
-   ```
-4. **Run the API**  
-   ```bash
-   node app.js
-   ```
-5. **Test in Swagger UI**  
-   Open: [http://localhost:5001/api-docs](http://localhost:5001/api-docs)
-
-## 🚀 API Endpoints
-
-### **🔹 Sign a License**
-```
-POST /sign-license
-{
-  "licenseKey": "USER123-PRODUCT456-EXP20251231"
-}
+```sh
+npm install
 ```
 
-### **🔹 Verify a License**
-```
-POST /verify-license
-{
-  "licenseKey": "USER123-PRODUCT456-EXP20251231",
-  "signature": "signed_data_here"
-}
+### **Requirements**
+- Node.js 16+  
+- Express.js (for API)  
+- Crypto module (built into Node.js)  
+
+---
+
+## ⚡ Usage
+
+### **1️⃣ Generate a Key Pair**
+To create an RSA **public-private key pair**, use:
+
+```javascript
+const { generateKeyPair } = require("./src/generateKeys");
+
+const { privateKey, publicKey } = generateKeyPair();
+console.log("Private Key:", privateKey);
+console.log("Public Key:", publicKey);
 ```
 
-## 🛠️ Contributing
-- Fork the repo  
-- Open an issue or PR with improvements  
+---
 
-## 📢 Where to Share?
-Want to help this project gain visibility? Share on:
-- 🔹 **GitHub Discussions** → [github.com/discussions](https://github.com/discussions)
-- 🔹 **Hacker News** → [news.ycombinator.com](https://news.ycombinator.com)
-- 🔹 **r/webdev, r/programming** → [reddit.com](https://www.reddit.com/)
-- 🔹 **Dev.to, Hashnode, Medium** → Post a blog
-- 🔹 **LinkedIn, Twitter** → Share with your network
+### **2️⃣ Sign a License Key**
+To **sign a license key** with your **private key**, use:
+
+```javascript
+const { signLicense } = require("./src/signLicense");
+
+const licenseKey = "USER123-PRODUCT456-EXP20251231";
+const signature = signLicense(licenseKey, privateKey);
+console.log("🔏 Signature:", signature);
+```
+
+---
+
+### **3️⃣ Verify a License Key**
+To **verify a license key**, use:
+
+```javascript
+const { verifyLicense } = require("./src/verifyLicense");
+
+const isValid = verifyLicense(licenseKey, signature, publicKey);
+console.log("✅ Valid License:", isValid);
+```
+
+---
+
+## **💼 API Usage**
+You can also run the **License Key API** using **Express + Swagger**.
+
+### **Start API Server**
+```sh
+node api/app.js
+```
+The API will start at **http://localhost:5000**
+
+---
+
+### **🔹 API Endpoints**
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/generate-keys` | Generates a new RSA key pair |
+| `POST` | `/sign-license` | Signs a license key with a private key |
+| `POST` | `/verify-license` | Verifies a signed license key |
+
+---
+
+### **🔹 Testing the API with Swagger**
+Swagger UI is available at:
+
+📌 **http://localhost:5000/api-docs**
+
+---
+
+## **🧪 Running Tests**
+To run the unit tests:
+
+```sh
+npm test
+```
+or  
+```sh
+jest
+```
+
+---
+
+## **💜 License**
+This project is licensed under the **MIT License**.  
+Feel free to modify and use it in your own projects.
+
+---
+
+## **🤝 Contributions**
+Pull requests are welcome! Please follow the contribution guidelines in `docs/CONTRIBUTING.md`.
+
+---
+
+## **📧 Contact**
+- GitHub: [Your GitHub Link]
+- Email: [Your Email]
+
+---
+
+🔥 **Happy coding!** 🚀
 
