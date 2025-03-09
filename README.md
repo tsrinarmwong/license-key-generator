@@ -1,7 +1,7 @@
 # 🔏 LICENSE KEY GENERATOR (PKI-Based Signing)
 
 A lightweight **open-source** JavaScript library for **signing and verifying software license keys** using **RSA 2048-bit encryption**.
-<img width="720" alt="Screenshot 2025-03-09 at 3 48 14 PM" src="https://github.com/user-attachments/assets/d374d3a4-cc4a-4452-a8e1-c8026a86f9be" />
+<img width="720" alt="Screenshot 2025-03-09 at 4 31 33 PM" src="https://github.com/user-attachments/assets/1ec53512-b053-4acf-a0ef-8469e44097d5" />
 
 
 ## 🚀 Features
@@ -75,7 +75,7 @@ You can also run the **License Key API** using **Express + Swagger**.
 ```sh
 node api/app.js
 ```
-The API will start at **http://localhost:5000**
+The API will start at **http://localhost:5001**
 
 ---
 
@@ -91,7 +91,7 @@ The API will start at **http://localhost:5000**
 ### **🔹 Testing the API with Swagger**
 Swagger UI is available at:
 
-📌 **http://localhost:5000/api-docs**
+📌 **http://localhost:5001/api-docs**
 
 ---
 
@@ -120,8 +120,8 @@ Pull requests are welcome! Please follow the contribution guidelines in `docs/CO
 ---
 
 ## **📧 Contact**
-- GitHub: [Your GitHub Link]
-- Email: [Your Email]
+- GitHub: [https://github.com/tsrinarmwong]
+- Email: [tsrinarmwong.careers@hawk.iit.edu]
 
 ---
 
