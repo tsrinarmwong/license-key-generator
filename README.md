@@ -3,19 +3,37 @@
 A lightweight **open-source** JavaScript library for **signing and verifying software license keys** using **RSA 2048-bit encryption**.
 <img width="720" alt="Screenshot 2025-03-09 at 4 31 33 PM" src="https://github.com/user-attachments/assets/1ec53512-b053-4acf-a0ef-8469e44097d5" />
 
-
 ## 🚀 Features
 - 🔑 **Generate RSA Key Pairs**
 - 🔏 **Sign License Keys**
 - ✅ **Verify Signed Licenses**
 - 🔒 **Uses SHA256 + RSA for Security**
 - 🛠 **Minimal & Easy to Integrate**
-- 🌍 **Open-source with API support (Swagger UI)**
+- 🌍 **Live API Hosted on Render**
 
 ---
 
+## **🌍 Live API (No Setup Required!)**
+The API is deployed on **Render** and can be accessed directly!
+
+🔗 **Base URL:** `https://license-signing-api.onrender.com`
+
+### **API Endpoints**
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/generate-keys` | Generates a new RSA key pair |
+| `POST` | `/sign-license` | Signs a license key with a private key |
+| `POST` | `/verify-license` | Verifies a signed license key |
+
+### **🔹 Try it in Swagger UI**
+📌 **Swagger API Docs:** [`https://license-signing-api.onrender.com/api-docs/`](https://license-signing-api.onrender.com/api-docs/)
+
+---
+
+or if you want to you it locally...
+
 ## 📦 Installation
-To install this package, run:
+To install this package locally, run:
 
 ```sh
 npm install
@@ -28,7 +46,7 @@ npm install
 
 ---
 
-## ⚡ Usage
+## ⚡ Usage (Local Development)
 
 ### **1️⃣ Generate a Key Pair**
 To create an RSA **public-private key pair**, use:
@@ -51,7 +69,8 @@ const { signLicense } = require("./src/signLicense");
 
 const licenseKey = "USER123-PRODUCT456-EXP20251231";
 const signature = signLicense(licenseKey, privateKey);
-console.log("🔏 Signature:", signature);
+console.log("
+🔏 Signature:", signature);
 ```
 
 ---
@@ -63,35 +82,9 @@ To **verify a license key**, use:
 const { verifyLicense } = require("./src/verifyLicense");
 
 const isValid = verifyLicense(licenseKey, signature, publicKey);
-console.log("✅ Valid License:", isValid);
+console.log("
+✅ Valid License:", isValid);
 ```
-
----
-
-## **💼 API Usage**
-You can also run the **License Key API** using **Express + Swagger**.
-
-### **Start API Server**
-```sh
-node api/app.js
-```
-The API will start at **http://localhost:5001**
-
----
-
-### **🔹 API Endpoints**
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/generate-keys` | Generates a new RSA key pair |
-| `POST` | `/sign-license` | Signs a license key with a private key |
-| `POST` | `/verify-license` | Verifies a signed license key |
-
----
-
-### **🔹 Testing the API with Swagger**
-Swagger UI is available at:
-
-📌 **http://localhost:5001/api-docs**
 
 ---
 
@@ -108,7 +101,7 @@ jest
 
 ---
 
-## **💜 License**
+## **📜 License**
 This project is licensed under the **MIT License**.  
 Feel free to modify and use it in your own projects.
 
