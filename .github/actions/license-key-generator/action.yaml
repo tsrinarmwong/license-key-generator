@@ -1,0 +1,19 @@
+name: "License Key Generator"
+description: "Generate and verify license keys using RSA 2048-bit signing"
+author: "tsrinarmwong"
+branding:
+  icon: "lock"
+  color: "blue"
+inputs:
+  license_key:
+    description: "License key to sign"
+    required: true
+  private_key:
+    description: "Private key for signing"
+    required: true
+outputs:
+  signature:
+    description: "Signed license key"
+runs:
+  using: "node16"
+  main: "index.js"
