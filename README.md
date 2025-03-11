@@ -1,6 +1,8 @@
 # 🔏 LICENSE KEY GENERATOR (PKI-Based Signing)
 
-A lightweight **open-source** JavaScript library for **signing and verifying software license keys** using **RSA 2048-bit encryption**.        
+A lightweight **open-source** JavaScript library for signing and verifying software license key using **RSA 2048-bit encryption**.         
+        
+⚛️ **I'm actively pushing this to be Post-Quantum Computing (PQC) compatible** to future-proof security.    
         
 ## ✨ Features
 - 🔑 **Generate RSA Key Pairs**
@@ -182,6 +184,13 @@ Feel free to modify and use it in your own projects.
 
 ## **🤝 Contributions**
 Pull requests are welcome! Please follow the contribution guidelines in `docs/CONTRIBUTING.md`.
+
+I'm pushing this tool to **GitHub Marketplace** to make it easier for developers and teams to integrate secure license key management into their workflow.  
+
+💡 **Want to support development?**  
+This project is **open for sponsorship!** Your contributions help me bring **Post-Quantum Security** to **software licensing**.  
+
+👉 [Sponsor me on GitHub](https://github.com/sponsors/tsrinarmwong) 🚀 
 
 ---
 
