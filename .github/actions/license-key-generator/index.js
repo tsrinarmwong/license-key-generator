@@ -1,5 +1,5 @@
 const core = require("@actions/core");
-const { signLicense } = require("../../src/signLicense");
+const { signLicense } = require("../../../src/signLicense");
 
 try {
     const licenseKey = core.getInput("license_key");

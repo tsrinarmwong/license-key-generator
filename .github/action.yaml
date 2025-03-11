@@ -14,5 +14,6 @@ inputs:
 outputs:
   signature:
     description: "Signed license key"
+runs:
   using: "node16"
   main: "index.js"
