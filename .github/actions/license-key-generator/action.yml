@@ -1,6 +1,6 @@
 name: "License Key Generator"
-description: "Generate and verify license keys using RSA 2048-bit signing"
-author: "tsrinarmwong"
+description: "Generate and verify software license keys using RSA 2048-bit signing"
+author: "YourGitHubUsername"
 branding:
   icon: "lock"
   color: "blue"
